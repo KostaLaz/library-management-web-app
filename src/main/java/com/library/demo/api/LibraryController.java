@@ -1,5 +1,6 @@
 package com.library.demo.api;
 
+import com.library.demo.domain.Book;
 import com.library.demo.service.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
