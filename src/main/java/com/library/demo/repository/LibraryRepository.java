@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface LibraryRepository extends CrudRepository<Book, String> {
+public interface LibraryRepository extends CrudRepository<Book, Long> {
 
-   Optional<Book> findByTitle(String title);
+   Optional<Book> findById(Long id);
 
-   Optional<Book> findByAuthor(String author);
+
 
 }
