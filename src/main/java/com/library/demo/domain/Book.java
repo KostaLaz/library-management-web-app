@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Collection;
 
 @Entity
 @Data
@@ -16,12 +17,15 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long bookId;
 
     @NotNull
     private String title;
 
     @NotNull
     private String author;
+
+    @ManyToMany
+    private Collection<User> users;
 
 }
